@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+  
+  --color-brand-red: #ff3b3b;
+  --color-brand-dark: #121212;
+}
+
+@layer base {
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/70 backdrop-blur-md border border-white/20;
+  }
+  
+  .text-gradient-red {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-red to-orange-500;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes rotate-sphere {
+  from { transform: rotate(145deg); }
+  to { transform: rotate(505deg); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-rotate-sphere {
+  animation: rotate-sphere 20s linear infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 4s ease-in-out infinite;
+}
+
+.sphere-gradient {
+  background: radial-gradient(circle at 30% 30%, #ff6b6b, #ff0000 30%, #4b0082 70%, #0000ff 100%);
+  box-shadow: 
+    inset -30px -30px 60px rgba(0,0,0,0.7),
+    inset 30px 30px 60px rgba(255,255,255,0.4),
+    0 0 120px rgba(255,59,59,0.4);
+  transform: rotate(145deg);
+}

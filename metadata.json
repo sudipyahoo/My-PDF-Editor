@@ -1,0 +1,13 @@
+{
+  "name": "Gopdfeditor",
+  "description": "Premium free PDF tools platform for editing, merging, compressing, and converting PDF documents online securely.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "PDF Manipulation",
+    "File Conversion",
+    "Real-time Processing"
+  ]
+}
